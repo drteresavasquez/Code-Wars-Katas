@@ -13,15 +13,11 @@ maskify("Nananananananananananananananana Batman!") // "########################
 
 // return masked string
 function maskify(cc) {
-    if(cc.length < 4){
-      return cc
-    }else{
-      let hashes = ''
-      let hashThese = cc.split(cc.substr(cc.length - 4)).join("")
-      let lastFour = (cc.substr(cc.length - 4))
-      for (let i = 0 ; i < hashThese.length; i++){
-        hashes += "#"
-      }
-      return hashes.concat(lastFour)
-    }  
+    cc = cc.split("");
+    for(var i = 0; i < cc.length - 4; i++){
+      cc[i] = "#";
+  }
+  
+  cc = cc.join("");
+  return cc
   }
