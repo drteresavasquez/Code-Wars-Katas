@@ -3,21 +3,21 @@
 // Your task is to write a function maskify, which changes all but the last four characters into '#'.
 
 maskify("4556364607935616") // "############5616"
-maskify(     "64607935616") //      "#######5616"
-maskify(               "1") //                "1"
-maskify(                "") //                 ""
+maskify("64607935616") //      "#######5616"
+maskify("1") //                "1"
+maskify("") //                 ""
 
 // "What was the name of your first pet?"
-maskify("Skippy")                                   //"##ippy"
+maskify("Skippy") //"##ippy"
 maskify("Nananananananananananananananana Batman!") // "####################################man!"
 
 // return masked string
 function maskify(cc) {
     cc = cc.split("");
-    for(var i = 0; i < cc.length - 4; i++){
-      cc[i] = "#";
-  }
-  
-  cc = cc.join("");
-  return cc
-  }
+    for (var i = 0; i < cc.length - 4; i++) {
+        cc[i] = "#";
+    }
+
+    cc = cc.join("");
+    return cc
+}
